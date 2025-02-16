@@ -40,7 +40,8 @@ const addTask = (data) => {
 const deleteTask = (id) => {
     return { type: DELETE_TASK, payload: id }
 }
-const store = createStore(taskReducer)
+export const store = createStore(taskReducer)
+
 store.dispatch(addTask("I am a payload 1"))
 store.dispatch(addTask("I am a payload2"))
 store.dispatch(deleteTask(1))
